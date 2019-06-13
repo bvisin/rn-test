@@ -11,6 +11,11 @@ const reducer = (state, action) => {
                 ...state,
                 selectedButtonIndex: action.index
             };
+        case "INCREMENT":
+            return {
+                ...state,
+                counter: state.counter + 1
+            }
         default:
             return state;
     }

@@ -11,3 +11,15 @@ export function setButtonIndex(index) {
         index: index
     }
 }
+
+export function incrementCounter() {
+    return {
+        type: "INCREMENT"
+    }
+}
+
+export function incrementCounterAsync() {
+    return {
+        type: "INCREMENT_ASYNC"
+    }
+}
