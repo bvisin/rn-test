@@ -5,19 +5,23 @@
  */
 
 import React, { Component } from 'react';
-import HelloWorld from "./HelloWorld"
-import { store }  from "./store";
+import HelloWorld from "./HelloWorld";
+import { persistor, store } from './store';
 import { Provider } from 'react-redux';
-import { View, StyleSheet } from 'react-native';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+import { View, StyleSheet, Image } from 'react-native';
+import Loading from "./Loading";
 
 export default class App extends Component {
 
   render() {
     return (
       <Provider store={store}>
-        <View style={styles.container}>
-          <HelloWorld/>
-        </View>
+        <PersistGate loading={<Loading />} persistor={persistor}>
+          <View style={styles.container}>
+            <HelloWorld/>
+          </View>
+        </PersistGate>
       </Provider>
     );
   }

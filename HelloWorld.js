@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import { connect } from 'react-redux'
-import {Platform, StyleSheet, Text, View, Image} from 'react-native';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Platform, StyleSheet, Text, View, Image } from 'react-native';
 import { ButtonGroup } from 'react-native-elements';
 import { setColor, setButtonIndex } from "./actions";
 import { store }  from "./store";
@@ -22,9 +22,7 @@ class HelloWorld extends Component {
   }
 
   render() {
-    let pic = {
-        uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
-    };
+    let pic = require('./assets/images/Bananavarieties.jpg')
     return (
         <View>
             <Text style={styles.welcome}>Hello {this.props.color} Banana</Text>

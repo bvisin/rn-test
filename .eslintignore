@@ -1,0 +1,5 @@
+node_modules/
+flow-typed/
+coverage/
+ios/fastlane_patched/
+e2e/
